@@ -7,7 +7,7 @@ interface BIMListResponse {
     data : BIMListItem[]
   }
 }
-const useBimList = () => {
+const UseBimList = () => {
   const [bimList, setBimList] = useState([] as BIMListItem[]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<unknown>(null);
@@ -28,7 +28,7 @@ const useBimList = () => {
           (bim : any ) => {
             if( bim?.map?.latitude && bim?.map?.longitude ) {
                 const isLatitudeValid = bim?.map?.latitude >= -90 && bim?.map?.latitude <= 90;
-                const isLongitudeValid = bim?.map?.longitude >= 0 && bim?.map?.longitude <= 90;
+                const isLongitudeValid = bim?.map?.longitude >= -180 && bim?.map?.longitude <= 180;
 
                 if( isLatitudeValid && isLongitudeValid ) {
                     return true;
@@ -52,4 +52,4 @@ const useBimList = () => {
   return { bimList, loading, error };
 };
 
-export default useBimList;
+export default UseBimList;

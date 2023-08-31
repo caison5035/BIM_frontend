@@ -3,9 +3,25 @@
     height:100vh
 }
 .right_side{
-    width:300px;
+    width:400px;
+    background: #1f2937;
 }
 .d_flex{
     display: flex;
    
+}
+.search-input-container{
+    width:100%;
+    margin: 10px;
+}
+.search-item{
+    background: #1f2937;
+    color: white;
+    padding: 10px;
+}
+.search-inp{
+    background: #1f2937;
+}
+.save-btn{
+    background: #595f7a;
 }

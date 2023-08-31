@@ -19,38 +19,7 @@ export default function App() {
     setLoc(marker);
   };
 
-  const handleUpload = async (selectedFile: any) => {
-    console.log(getLocation, "oooo");
-    console.log(selectedFile, "oooo");
 
-    if (!selectedFile) {
-      alert("Please select a file first."); // Display alert if no file is selected
-    } else if (!getLocation) {
-      alert("Please select location to tag with bim file."); // Display alert if no file is selected
-    } else {
-      // Logic for handling selected location
-      const formData = new FormData();
-      formData.append("file", selectedFile as Blob);
-      formData.append("longitude", getLocation.longitude);
-      formData.append("latitude", getLocation.latitude);
-
-      try {
-        const response = await jwtInterceptor.post(
-          `http://127.0.0.1:3001/bim/upload`,
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
-        console.log(response.data); // Handle response data
-      } catch (error) {
-        console.error("Error uploading file:", error);
-      }
-    }
-  };
-  
   return (
     <BrowserRouter>
       <AuthContextProvider>
@@ -68,7 +37,7 @@ export default function App() {
               path='/map'
               element={
                 <ProtectedRoute accessBy='authenticated'>
-                  <UploadBIMObject handleUpload={handleUpload} />
+
                   <Map getLat={getLat} />
                 </ProtectedRoute>
               }></Route>
