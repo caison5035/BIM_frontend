@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import UploadBIMObject from "./components/uploadBim";
-import axios from "axios";
+import jwtInterceptor from "./shared/jwtInterceptor";
 import "./App.css";
 import Layout from "./shared/layout";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
@@ -35,7 +35,7 @@ export default function App() {
       formData.append("latitude", getLocation.latitude);
 
       try {
-        const response = await axios.post(
+        const response = await jwtInterceptor.post(
           `http://127.0.0.1:3001/bim/upload`,
           formData,
           {
@@ -78,4 +78,3 @@ export default function App() {
     </BrowserRouter>
   );
 }
-export default App;

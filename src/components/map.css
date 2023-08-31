@@ -1,0 +1,11 @@
+.left_side{
+    width:100%;
+    height:100vh
+}
+.right_side{
+    width:300px;
+}
+.d_flex{
+    display: flex;
+   
+}

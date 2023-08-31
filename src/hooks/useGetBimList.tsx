@@ -1,15 +1,21 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import jwtInterceptor from '../shared/jwtInterceptor';
+import BIMListItem from '../models/BIM';
+interface BIMListResponse {
+  data : {
+    data : BIMListItem[]
+  }
+}
 const useBimList = () => {
-  const [bimList, setBimList] = useState([]);
+  const [bimList, setBimList] = useState([] as BIMListItem[]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<unknown>(null);
 
   useEffect(() => {
     const fetchBimList = async () => {
       try {
-        const response = await axios.get(
+        const response : BIMListResponse= await jwtInterceptor.get(
           'http://127.0.0.1:3001/bim/list',
           {
             headers: {
