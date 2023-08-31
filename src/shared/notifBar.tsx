@@ -27,12 +27,11 @@ export default function NotificationBar({ isShown }: any): any {
             </div>
             <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
               <div className="rounded-md shadow-sm">
-                <a
-                  href="https://tailwindui.com?utm_source=tailwindcss&amp;utm_medium=footer-banner"
+                <button
                   className="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-gray-900 bg-white hover:text-gray-800 focus:outline-none focus:underline"
                 >
-                  Click on Map
-                </a>
+                  Click on Map Area
+                </button>
               </div>
             </div>
             <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-2">

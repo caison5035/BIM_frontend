@@ -8,6 +8,17 @@ function Login() {
   const { login } = useContext(AuthContext);
   console.log(login);
   const handleLogin = async () => {
+    if (!emailRef?.current?.value)
+    {
+      alert("Email is required");
+      return;
+    } 
+    if(!passwordRef?.current?.value) {
+      alert("Password is required");
+      return;
+    }
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
     let payload = {
       email: emailRef.current?.value,
       password: passwordRef.current?.value,
