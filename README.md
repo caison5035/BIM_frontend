@@ -73,56 +73,56 @@ To run the project locally, follow these installation steps:
 
 ## Folder structure
 
-    ```bash
-- .gitignore
-- README.md
-- package-lock.json
-- package.json
-- public/
-   |-- favicon.ico
-   |-- index.html
-   |-- logo192.png
-   |-- logo512.png
-   |-- manifest.json
-   |-- robots.txt
-   |-- styles.css
-- src/
-   |-- .env
-   |-- App.css
-   |-- App.test.tsx
-   |-- App.tsx
-   |-- components/
-   |   |-- map.css
-   |   |-- map.tsx
-   |   |-- uploadBim.tsx
-   |-- hooks/
-   |   |-- useGetBimList.tsx
-   |-- index.css
-   |-- index.tsx
-   |-- logo.svg
-   |-- models/
-   |   |-- BIM.ts
-   |   |-- Marker.ts
-   |-- pages/
-   |   |-- home/
-   |   |   |-- home.css
-   |   |   |-- home.tsx
-   |   |-- login/
-   |   |   |-- login.css
-   |   |   |-- login.tsx
-   |-- react-app-env.d.ts
-   |-- reportWebVitals.ts
-   |-- setupTests.ts
-   |-- shared/
-   |   |-- authContext.tsx
-   |   |-- jwtInterceptor.tsx
-   |   |-- layout.tsx
-   |   |-- notifBar.tsx
-   |   |-- protectedRoute.tsx
-   |-- utils/
-   |   |-- Utils.tsx
-- tailwind.config.js
-- tsconfig.json
+```bash
+    - .gitignore
+    - README.md
+    - package-lock.json
+    - package.json
+    - public/
+    |-- favicon.ico
+    |-- index.html
+    |-- logo192.png
+    |-- logo512.png
+    |-- manifest.json
+    |-- robots.txt
+    |-- styles.css
+    - src/
+    |-- .env
+    |-- App.css
+    |-- App.test.tsx
+    |-- App.tsx
+    |-- components/
+    |   |-- map.css
+    |   |-- map.tsx
+    |   |-- uploadBim.tsx
+    |-- hooks/
+    |   |-- useGetBimList.tsx
+    |-- index.css
+    |-- index.tsx
+    |-- logo.svg
+    |-- models/
+    |   |-- BIM.ts
+    |   |-- Marker.ts
+    |-- pages/
+    |   |-- home/
+    |   |   |-- home.css
+    |   |   |-- home.tsx
+    |   |-- login/
+    |   |   |-- login.css
+    |   |   |-- login.tsx
+    |-- react-app-env.d.ts
+    |-- reportWebVitals.ts
+    |-- setupTests.ts
+    |-- shared/
+    |   |-- authContext.tsx
+    |   |-- jwtInterceptor.tsx
+    |   |-- layout.tsx
+    |   |-- notifBar.tsx
+    |   |-- protectedRoute.tsx
+    |-- utils/
+    |   |-- Utils.tsx
+    - tailwind.config.js
+    - tsconfig.json
 ```
 
 
