@@ -73,7 +73,7 @@ To run the project locally, follow these installation steps:
 
 ## Folder structure
 
-    ```
+    ```bash
 - .gitignore
 - README.md
 - package-lock.json
