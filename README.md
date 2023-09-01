@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# BIM Project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -127,7 +127,9 @@ To run the project locally, follow these installation steps:
 
 ## Directories description
 public: 
-    This directory contains publicly accessible files that are served as static assets by this application. It typically includes HTML templates, images, and other files that don't need to go through a build process.
+    This directory contains publicly accessible files that are served as static assets by this application. It typically 
+    
+    includes HTML templates, images, and other files that don't need to go through a build process.
 
 src: 
     This directory contains the source code of this application.
