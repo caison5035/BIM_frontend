@@ -124,3 +124,5 @@ To run the project locally, follow these installation steps:
 - tailwind.config.js
 - tsconfig.json
 
+
+
