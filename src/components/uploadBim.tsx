@@ -1,21 +1,19 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { MarkerItem } from "../models/Marker";
+import React, { useState } from "react";
 
-function UploadBIMObject({ handleUpload , handleClose , selectedMarker}: any) {
+function UploadBIMObject({ handleUpload, handleClose, selectedMarker }: any) {
   const [selectedFile, setSelectedFile] = useState(null);
-
 
   const handleFileChange = (event: any) => {
     setSelectedFile(event.target.files[0]);
   };
+
   const handleSubmit = () => {
-    if(!selectedFile){
+    if (!selectedFile) {
       alert("Please select a file to upload");
-    }else{
-      return handleUpload(selectedFile);
+    } else {
+      return handleUpload(selectedFile, selectedMarker);
     }
-  }
+  };
 
   return (
     <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
@@ -25,25 +23,24 @@ function UploadBIMObject({ handleUpload , handleClose , selectedMarker}: any) {
             Add BIM objects / markers to map
           </p>
           <div className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            <p >
+            <p>
               <b>Latitude:</b>
               <>
-              {selectedMarker?.latitude}
+                {selectedMarker?.latitude}
               </>
             </p>
-            <p >
-             <b>Longitude:</b>
-             <>
-             {selectedMarker?.longitude}
-             </>
+            <p>
+              <b>Longitude:</b>
+              <>
+                {selectedMarker?.longitude}
+              </>
             </p>
           </div>
           <ul className="my-4 space-y-3">
             <li>
-              <a
-                href="#"
+              <button
                 className="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
-                onClick={()=>document?.getElementById('upload-file')?.click()}
+                onClick={() => document?.getElementById('upload-file')?.click()}
               >
                 <span className="flex-1 ml-3 whitespace-nowrap">
                   Upload file
@@ -51,7 +48,7 @@ function UploadBIMObject({ handleUpload , handleClose , selectedMarker}: any) {
                 <span className="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-gray-500 bg-gray-200 rounded dark:bg-gray-700 dark:text-gray-400">
                   +
                 </span>
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -73,7 +70,7 @@ function UploadBIMObject({ handleUpload , handleClose , selectedMarker}: any) {
         </button>
       </div>
       <div>
-        <input type="file" onChange={handleFileChange} id="upload-file" hidden/>
+        <input type="file" onChange={handleFileChange} id="upload-file" hidden />
       </div>
     </div>
   );

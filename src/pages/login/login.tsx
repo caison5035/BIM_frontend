@@ -20,8 +20,8 @@ function Login() {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     let payload = {
-      email: emailRef.current?.value,
-      password: passwordRef.current?.value,
+      email ,
+      password
     };
     console.log(payload);
     await login(payload);

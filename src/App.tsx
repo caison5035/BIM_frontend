@@ -1,6 +1,3 @@
-import React, { useState } from "react";
-import UploadBIMObject from "./components/uploadBim";
-import jwtInterceptor from "./shared/jwtInterceptor";
 import "./App.css";
 import Layout from "./shared/layout";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
@@ -13,13 +10,6 @@ import Map from "../src/components/map";
 // const env = dotenv.config().parsed;
 
 export default function App() {
-  const [getLocation, setLoc] = useState<any>(null);
-  const getLat = (marker: any) => {
-    console.log(marker, "markerdaTA");
-    setLoc(marker);
-  };
-
-
   return (
     <BrowserRouter>
       <AuthContextProvider>
@@ -37,8 +27,7 @@ export default function App() {
               path='/map'
               element={
                 <ProtectedRoute accessBy='authenticated'>
-
-                  <Map getLat={getLat} />
+                  <Map />
                 </ProtectedRoute>
               }></Route>
           </Routes>

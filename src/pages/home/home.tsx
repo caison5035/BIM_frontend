@@ -7,12 +7,10 @@ const Home = () => {
         style={{ minHeight: "500px", minWidth: "600px" }}
       >
         <h1>
-        <center>
-        Home 
-        <span className="color-blue">
-        component
-        </span>
-        </center>
+          <center>
+            Home
+            <span className="color-blue">component</span>
+          </center>
         </h1>
       </div>
     </>

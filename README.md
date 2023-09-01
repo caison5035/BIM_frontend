@@ -44,3 +44,83 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Table of Contents
+
+- [Project Description](#project-description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Workflow](#workflow)
+- [Folder Structure](#folder-structure)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Project Description
+
+The File Tagging on Map project provides a platform where users can log in and upload files, which can then be tagged to specific locations on a map. It aims to demonstrate the ability to associate files with geographic coordinates.
+
+## Installation
+
+To run the project locally, follow these installation steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   cd <project-folder>
+   npm i
+   npm start
+
+## Folder structure
+
+- .gitignore
+- README.md
+- package-lock.json
+- package.json
+- public/
+   |-- favicon.ico
+   |-- index.html
+   |-- logo192.png
+   |-- logo512.png
+   |-- manifest.json
+   |-- robots.txt
+   |-- styles.css
+- src/
+   |-- .env
+   |-- App.css
+   |-- App.test.tsx
+   |-- App.tsx
+   |-- components/
+   |   |-- map.css
+   |   |-- map.tsx
+   |   |-- uploadBim.tsx
+   |-- hooks/
+   |   |-- useGetBimList.tsx
+   |-- index.css
+   |-- index.tsx
+   |-- logo.svg
+   |-- models/
+   |   |-- BIM.ts
+   |   |-- Marker.ts
+   |-- pages/
+   |   |-- home/
+   |   |   |-- home.css
+   |   |   |-- home.tsx
+   |   |-- login/
+   |   |   |-- login.css
+   |   |   |-- login.tsx
+   |-- react-app-env.d.ts
+   |-- reportWebVitals.ts
+   |-- setupTests.ts
+   |-- shared/
+   |   |-- authContext.tsx
+   |   |-- jwtInterceptor.tsx
+   |   |-- layout.tsx
+   |   |-- notifBar.tsx
+   |   |-- protectedRoute.tsx
+   |-- utils/
+   |   |-- Utils.tsx
+- tailwind.config.js
+- tsconfig.json
+
