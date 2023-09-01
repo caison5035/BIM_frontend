@@ -125,4 +125,27 @@ To run the project locally, follow these installation steps:
     - tsconfig.json
 ```
 
+## Directories description
+public: 
+    This directory contains publicly accessible files that are served as static assets by this application. It typically includes HTML templates, images, and other files that don't need to go through a build process.
 
+src: 
+    This directory contains the source code of this application.
+
+components: 
+    This directory contains components used throughout the application.
+
+hooks: 
+    Custom React hooks used in this application.
+
+models: 
+    This directory may contain data models or TypeScript types used in this application.
+
+pages: 
+    This directory contains individual pages or views of this application.
+
+shared: 
+    This directory contains shared components or utilities.
+
+utils: 
+    Utility functions or modules.
