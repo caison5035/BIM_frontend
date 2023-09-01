@@ -67,13 +67,13 @@ To run the project locally, follow these installation steps:
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
    cd <project-folder>
    npm i
    npm start
 
 ## Folder structure
 
+    ```
 - .gitignore
 - README.md
 - package-lock.json
@@ -123,6 +123,6 @@ To run the project locally, follow these installation steps:
    |   |-- Utils.tsx
 - tailwind.config.js
 - tsconfig.json
-
+```
 
 
